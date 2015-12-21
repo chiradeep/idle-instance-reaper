@@ -1,0 +1,34 @@
+{
+    "Version": "2012-10-17", 
+    "Statement": [
+        {
+            "Action": [
+                "ec2:DescribeInstances", 
+                "ec2:StopInstances"
+            ], 
+            "Resource": [
+                "*"
+            ], 
+            "Effect": "Allow" 
+        }, 
+        {
+            "Action": [
+                "autoscaling:DescribeAutoScalingGroups", 
+                "autoscaling:DescribeAutoScalingInstances"
+            ], 
+            "Resource": [
+                "*"
+            ], 
+            "Effect": "Allow" 
+        }, 
+        {
+            "Action": [
+                "cloudwatch:GetMetricStatistics"
+            ], 
+            "Resource": [
+                "*"
+            ], 
+            "Effect": "Allow"
+        }
+    ]
+} 
